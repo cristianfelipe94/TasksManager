@@ -6,7 +6,6 @@
     <meta name="author" content="Cristian">
     <title>Cristian Felipe Practica.</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
   </head>
 
   <body>
@@ -14,7 +13,7 @@
     <div class="mainWrapper">
 
       <div class="titleBlock">
-        <h1>Controlador de Tareas</h1>
+        <h1 id="mainTitle">Controlador de Tareas</h1>
       </div>
 
       <div class="processBlock">
@@ -24,8 +23,11 @@
         </div>
 
         <div>
-            <ul>
+            <ul class="incompletedBlock" id="taskNameIncompletedBox">
               <li>First Tasks, Incomplete.</li>
+            </ul>
+            <ul class="incompletedBlock" id="taskDateIncompletedBox">
+                <li>Time Task, Incomplite.</li>
             </ul>
         </div>
 
@@ -40,11 +42,11 @@
 
         <div>
           <h2>Task Deadline.</h2>
-          <input type="date">
+          <input type="date" id="dateManager">
         </div>
 
         <div>
-          <input type="button" value="" placeholder="Register tasks.">
+          <input type="button" value="" id="btnAction">
         </div>
 
       </div>
@@ -56,7 +58,7 @@
         </div>
 
         <div>
-          <ul>
+          <ul id="taskCompletedBox">
             <li>First Tasks, completed.</li>
           </ul>
         </div>
@@ -67,6 +69,8 @@
     <footer>
       <p>Cristian Felipe &copy; 2018.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 
   </body>
 
