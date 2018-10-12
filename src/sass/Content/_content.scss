@@ -5,7 +5,7 @@ body {
 }
 
 .mainWrapper {
-  width:672px;
+  width: 900px;
   height: 620px;
   border:2px solid black;
   position: relative;
@@ -15,34 +15,68 @@ body {
 .titleBlock {
   border:2px solid black;
   margin:10px;
+  text-align: center;
 }
 
 .processBlock {
   border:2px solid black;
-  width: 200px;
+  width: 29%;
   height: 400px;
   float: left;
   margin: 10px;
+}
+
+.processTitleBLock {
+  border:2px solid black;
+  text-align: center;
 }
 
 .inputBlock {
   border:2px solid black;
-  width: 200px;
+  width: 29%;
   height: 400px;
   float: left;
   margin: 10px;
+}
+
+.taskNameTitle {
+  border:2px solid black;
+  text-align: center;
+}
+
+.taskDateTitle {
+  border:2px solid black;
+  text-align: center;
+}
+
+.btnStyle {
+  border:2px solid black;
+  text-align: center;
 }
 
 .completedBlock {
   border:2px solid black;
-  width: 200px;
+  width: 29%;
   height: 400px;
   float: left;
   margin: 10px;
 }
 
+.completedTitleBlock {
+  border:2px solid black;
+  text-align: center;
+}
+
+.completedTaskBlock {
+  border:2px solid black;
+  text-align: center;
+}
+
 .incompletedBlock {
-  display: inline-block;
-  width: 15%;
+  width: 33%;
   list-style: none;
+  float: left;
+  border:2px solid black;
+  padding: 0;
+  margin: 20px;
 }
