@@ -1,9 +1,14 @@
+
+//Helpers.
+//////////
 .clearFix {
   clear: both;
   content:"";
   display: block;
 }
 
+//Container Styles.
+///////////////////
 body {
   position: absolute;
   height: 100vh;
@@ -24,12 +29,22 @@ body {
   background-color: #607c99;
 }
 
+//Main Blocks.
+//////////////
 .titleBlock {
   border: 2px solid black;
   margin: 1%;
   text-align: center;
   width: 96.5%;
   background-color:#907c99;
+}
+
+.inputBlock {
+  border-bottom: 2px solid black;
+  width: 30%;
+  height: 65%;
+  float: left;
+  margin: 1%;
 }
 
 .processBlock {
@@ -60,6 +75,8 @@ body {
   }
 }
 
+//Sticky Blocks.
+///////////////
 .processTitleBLock {
   border-bottom:2px solid black;
   text-align: center;
@@ -69,14 +86,17 @@ body {
   background-color:	#c07c99;
 }
 
-.inputBlock {
-  border-bottom: 2px solid black;
-  width: 30%;
-  height: 65%;
-  float: left;
-  margin: 1%;
+.completedTitleBlock {
+  border-bottom:2px solid black;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  padding: 1%;
+  background-color:	#c7bbc9;
 }
 
+//Title Styles Text.
+////////////////////
 .taskNameTitle {
   border-bottom:2px solid black;
   text-align: center;
@@ -102,6 +122,13 @@ body {
   }
 }
 
+//Btn Styles.
+/////////////
+.btnStyle {
+  margin-top: 10%;
+  cursor: pointer;
+}
+
 #btnAction {
   width: 40%;
   height: 20px;
@@ -117,27 +144,8 @@ background-color:#dc1466;
   }
 }
 
-
-.btnStyle {
-  margin-top: 10%;
-  cursor: pointer;
-}
-
-
-.completedTitleBlock {
-  border-bottom:2px solid black;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  padding: 1%;
-  background-color:	#c7bbc9;
-}
-
-.completedTaskBlock {
-  border:2px solid black;
-  text-align: center;
-}
-
+//Task blocks Styles.
+/////////////////////
 #newRowIncompletedBox {
   width: 100%;
   height: 100%;
@@ -150,6 +158,7 @@ background-color:#dc1466;
 
 .incompletedBlock {
   width: 30%;
+  min-width: 87px;
   list-style: none;
   float: left;
   border:2px solid black;
@@ -162,6 +171,7 @@ background-color:#dc1466;
 
 .completedBlock {
   width: 30%;
+  min-width: 87px;
   list-style: none;
   float: left;
   border:2px solid black;
@@ -170,4 +180,15 @@ background-color:#dc1466;
   text-align: center;
   height: 10%;
   background-color: white;
+}
+
+//Responsive.
+/////////////
+@media only screen and (max-width: 1073px){
+  .incompletedBlock {
+    width: 80%;
+  }
+  .completedBlock {
+    width: 80%;
+  }
 }
