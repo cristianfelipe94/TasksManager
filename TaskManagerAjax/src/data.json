@@ -1,0 +1,22 @@
+[
+  {
+    "text": "Cras Euismod Ligula Etiam",
+    "color": "red",
+    "bold": true
+  },
+  {
+    "text": "Parturient Dapibus Ultricies Sit",
+    "color": "blue",
+    "bold": false
+  },
+  {
+    "text": "Amet Dolor Parturient Egestas",
+    "color": "green",
+    "bold": false
+  },
+  {
+    "text": "Ornare Justo Fringilla Cursus",
+    "color": "black",
+    "bold": true
+  }
+]
