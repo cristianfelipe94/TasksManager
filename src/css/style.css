@@ -7,7 +7,10 @@ body {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 1rem;
+  background-color: #307c99;
+  font-family: 'Playfair Display', serif; }
 
 .mainWrapper {
   width: 90%;
@@ -15,67 +18,100 @@ body {
   border: 2px solid black;
   position: relative;
   margin: auto;
-  top: 4vh; }
+  top: 4vh;
+  background-color: #607c99; }
 
 .titleBlock {
   border: 2px solid black;
   margin: 1%;
-  text-align: center; }
+  text-align: center;
+  width: 96.5%;
+  background-color: #907c99; }
 
 .processBlock {
   border: 2px solid black;
-  width: 29%;
+  width: 31%;
   height: 65%;
   float: left;
   margin: 1%;
-  overflow: auto; }
+  overflow: auto;
+  background-color: #c7bbc9;
+  transition: background-color 0.8s; }
+  .processBlock:hover {
+    background-color: #886f8c; }
 
 .doneBlock {
   border: 2px solid black;
-  width: 29%;
+  width: 31%;
   height: 65%;
   float: left;
   margin: 1%;
-  overflow: auto; }
+  overflow: auto;
+  background-color: #c07c99;
+  transition: background-color 0.8s; }
+  .doneBlock:hover {
+    background-color: #a04d71; }
 
 .processTitleBLock {
-  border: 2px solid black;
+  border-bottom: 2px solid black;
   text-align: center;
   position: sticky;
   top: 0;
-  background-color: white; }
+  padding: 1%;
+  background-color: #c07c99; }
 
 .inputBlock {
-  border: 2px solid black;
-  width: 29%;
+  border-bottom: 2px solid black;
+  width: 30%;
   height: 65%;
   float: left;
   margin: 1%; }
 
 .taskNameTitle {
-  border: 2px solid black;
-  text-align: center; }
+  border-bottom: 2px solid black;
+  text-align: center;
+  background-color: #83adb5;
+  padding: 10%;
+  border-top: 2px solid black;
+  transition: background-color 0.8s; }
+  .taskNameTitle:hover {
+    background-color: #6a9da6; }
 
 .taskDateTitle {
-  border: 2px solid black;
-  text-align: center; }
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  text-align: center;
+  background-color: #83adb5;
+  margin-top: 10%;
+  padding: 5%;
+  transition: background-color 0.8s; }
+  .taskDateTitle:hover {
+    background-color: #6a9da6; }
 
 #btnAction {
   width: 40%;
-  height: auto;
+  height: 20px;
   border: 2px solid black;
   text-align: center;
   position: relative;
-  margin: auto; }
+  margin: auto;
+  padding: 2%;
+  background-color: #ef4f91;
+  transition: background-color 0.8s; }
+  #btnAction:hover {
+    background-color: #dc1466; }
 
 .btnStyle {
-  border: 2px solid black;
   margin-top: 10%;
   cursor: pointer; }
 
 .completedTitleBlock {
-  border: 2px solid black;
-  text-align: center; }
+  border-bottom: 2px solid black;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  padding: 1%;
+  background-color: #c7bbc9; }
 
 .completedTaskBlock {
   border: 2px solid black;
@@ -97,7 +133,8 @@ body {
   padding: 1%;
   margin: 8%;
   text-align: center;
-  height: 10%; }
+  height: 10%;
+  background-color: white; }
 
 .completedBlock {
   width: 30%;
@@ -107,6 +144,7 @@ body {
   padding: 1%;
   margin: 8%;
   text-align: center;
-  height: 10%; }
+  height: 10%;
+  background-color: white; }
 
 /*# sourceMappingURL=style.css.map */

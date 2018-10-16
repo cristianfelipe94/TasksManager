@@ -56,15 +56,15 @@ function uploadTask() {
   } else if (textNameWord.value === '' && !dateManager.value) {
     textNameWord.style.border = ('5px solid red');
     dateManager.style.border = ('5px solid red');
-    mainTitle.innerHTML = 'Error, please complete the following information';
+    mainTitle.innerHTML = 'Error, please complete the following information.';
   } else if (textNameWord.value && !dateManager.value) {
     textNameWord.style.border = ('');
     dateManager.style.border = ('5px solid red');
-    mainTitle.innerHTML = 'Error, please complete the following information';
+    mainTitle.innerHTML = 'Error, please complete the following information.';
   } else if (!textNameWord.value && dateManager.value) {
     textNameWord.style.border = ('5px solid red');
     dateManager.style.border = ('');
-    mainTitle.innerHTML = 'Error, please complete the following information';
+    mainTitle.innerHTML = 'Error, please complete the following information.';
   }
 }
 
