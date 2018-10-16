@@ -1,3 +1,4 @@
+
 // Get all the elements from the DOM.
 const textNameWord = document.getElementById('taskManager');
 const dateManager = document.getElementById('dateManager');
@@ -28,6 +29,9 @@ function uploadTask() {
     checkBoxList.setAttribute('class', 'checkBoxStatus');
     incompletedNewRow.appendChild(newTaskNameList);
     incompletedNewRow.appendChild(newTaskDateList);
+    const ObjectArray = [];
+    ObjectArray.push({ TaskName: textNameWord.value, DateData: dateManager.value, Completed: false });
+    console.log(ObjectArray);
     newTaskNameList.style.color = ('red');
     newTaskDateList.style.color = ('red');
     textNameWord.value = '';
