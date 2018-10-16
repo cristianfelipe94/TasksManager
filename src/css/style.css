@@ -6,44 +6,51 @@
 body {
   position: absolute;
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  overflow: hidden; }
 
 .mainWrapper {
-  width: 900px;
+  width: 90%;
   height: 620px;
   border: 2px solid black;
   position: relative;
-  margin: auto; }
+  margin: auto;
+  top: 4vh; }
 
 .titleBlock {
   border: 2px solid black;
-  margin: 10px;
+  margin: 1%;
   text-align: center; }
 
 .processBlock {
   border: 2px solid black;
   width: 29%;
-  height: 400px;
+  height: 65%;
   float: left;
-  margin: 10px; }
+  margin: 1%;
+  overflow: auto; }
 
 .doneBlock {
   border: 2px solid black;
   width: 29%;
-  height: 400px;
+  height: 65%;
   float: left;
-  margin: 10px; }
+  margin: 1%;
+  overflow: auto; }
 
 .processTitleBLock {
   border: 2px solid black;
-  text-align: center; }
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: white; }
 
 .inputBlock {
   border: 2px solid black;
   width: 29%;
-  height: 400px;
+  height: 65%;
   float: left;
-  margin: 10px; }
+  margin: 1%; }
 
 .taskNameTitle {
   border: 2px solid black;
@@ -54,15 +61,17 @@ body {
   text-align: center; }
 
 #btnAction {
-  width: 80px;
-  height: 20px;
+  width: 40%;
+  height: auto;
   border: 2px solid black;
   text-align: center;
   position: relative;
   margin: auto; }
 
 .btnStyle {
-  border: 2px solid black; }
+  border: 2px solid black;
+  margin-top: 10%;
+  cursor: pointer; }
 
 .completedTitleBlock {
   border: 2px solid black;
@@ -81,23 +90,23 @@ body {
   height: 100%; }
 
 .incompletedBlock {
-  width: 33%;
+  width: 30%;
   list-style: none;
   float: left;
   border: 2px solid black;
-  padding: 0;
-  margin: 20px;
+  padding: 1%;
+  margin: 8%;
   text-align: center;
-  height: 40px; }
+  height: 10%; }
 
 .completedBlock {
-  width: 33%;
+  width: 30%;
   list-style: none;
   float: left;
   border: 2px solid black;
-  padding: 0;
-  margin: 20px;
+  padding: 1%;
+  margin: 8%;
   text-align: center;
-  height: 40px; }
+  height: 10%; }
 
 /*# sourceMappingURL=style.css.map */

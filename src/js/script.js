@@ -43,7 +43,7 @@ function uploadTask() {
         completedNewRow.appendChild(newTaskDateList);
         newTaskNameList.style.color = ('green');
         newTaskDateList.style.color = ('green');
-      } else if (!checkBoxList.checked){
+      } else if (!checkBoxList.checked) {
         newTaskNameList.setAttribute('class', 'incompletedBlock');
         newTaskDateList.setAttribute('class', 'incompletedBlock');
         incompletedNewRow.appendChild(newTaskNameList);
@@ -70,4 +70,3 @@ function uploadTask() {
 
 // Set the Event to the BTN to run the Function.
 btnAction.addEventListener('click', uploadTask);
-
