@@ -30,7 +30,8 @@ function uploadTask() {
     incompletedNewRow.appendChild(newTaskNameList);
     incompletedNewRow.appendChild(newTaskDateList);
     const ObjectArray = [];
-    ObjectArray.push({ TaskName: textNameWord.value, DateData: dateManager.value, Completed: false });
+    const MainArray = ({ TaskName: textNameWord.value, DateData: dateManager.value, Completed: false });
+    ObjectArray.push(MainArray);
     console.log(ObjectArray);
     newTaskNameList.style.color = ('red');
     newTaskDateList.style.color = ('red');
@@ -41,6 +42,8 @@ function uploadTask() {
     mainTitle.innerHTML = 'Successful Task Registration.';
     function changeStatus() {
       if (checkBoxList.checked) {
+        MainArray.Completed = true;
+        console.log(ObjectArray);
         newTaskNameList.setAttribute('class', 'completedBlock');
         newTaskDateList.setAttribute('class', 'completedBlock');
         completedNewRow.appendChild(newTaskNameList);
@@ -48,6 +51,8 @@ function uploadTask() {
         newTaskNameList.style.color = ('green');
         newTaskDateList.style.color = ('green');
       } else if (!checkBoxList.checked) {
+        MainArray.Completed = false;
+        console.log(ObjectArray);
         newTaskNameList.setAttribute('class', 'incompletedBlock');
         newTaskDateList.setAttribute('class', 'incompletedBlock');
         incompletedNewRow.appendChild(newTaskNameList);
