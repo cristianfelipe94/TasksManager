@@ -1,22 +1,17 @@
 [
   {
-    "text": "Cras Euismod Ligula Etiam",
-    "color": "red",
-    "bold": true
+    "TaskName": "Task number 1",
+    "DateData": "2018/10/04",
+    "Completed": false
   },
   {
-    "text": "Parturient Dapibus Ultricies Sit",
-    "color": "blue",
-    "bold": false
+    "TaskName": "Task number 2",
+    "DateData": "2018/10/5",
+    "Completed": true
   },
   {
-    "text": "Amet Dolor Parturient Egestas",
-    "color": "green",
-    "bold": false
-  },
-  {
-    "text": "Ornare Justo Fringilla Cursus",
-    "color": "black",
-    "bold": true
+    "TaskName": "Task number 3",
+    "DateData": "2018/10/6",
+    "Completed": false
   }
 ]
