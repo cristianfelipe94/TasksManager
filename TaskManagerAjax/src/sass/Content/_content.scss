@@ -1,0 +1,194 @@
+
+//Helpers.
+//////////
+.clearFix {
+  clear: both;
+  content:"";
+  display: block;
+}
+
+//Container Styles.
+///////////////////
+body {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-size: 1rem;
+  background-color:#307c99;
+  font-family: 'Playfair Display', serif;
+}
+
+.mainWrapper {
+  width: 90%;
+  height: 620px;
+  border: 2px solid black;
+  position: relative;
+  margin: auto;
+  top: 4vh;
+  background-color: #607c99;
+}
+
+//Main Blocks.
+//////////////
+.titleBlock {
+  border: 2px solid black;
+  margin: 1%;
+  text-align: center;
+  width: 96.5%;
+  background-color:#907c99;
+}
+
+.inputBlock {
+  border-bottom: 2px solid black;
+  width: 30%;
+  height: 65%;
+  float: left;
+  margin: 1%;
+}
+
+.processBlock {
+  border: 2px solid black;
+  width: 31%;
+  height: 65%;
+  float: left;
+  margin: 1%;
+  overflow: auto;
+  background-color: #c7bbc9;
+  transition:background-color 0.8s;
+  &:hover {
+    background-color:#886f8c;
+  }
+}
+
+.doneBlock {
+  border:2px solid black;
+  width: 31%;
+  height: 65%;
+  float: left;
+  margin: 1%;
+  overflow: auto;
+  background-color:#c07c99;
+  transition:background-color 0.8s;
+  &:hover {
+    background-color:#a04d71;
+  }
+}
+
+//Sticky Blocks.
+///////////////
+.processTitleBLock {
+  border-bottom:2px solid black;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  padding: 1%;
+  background-color:	#c07c99;
+}
+
+.completedTitleBlock {
+  border-bottom:2px solid black;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  padding: 1%;
+  background-color:	#c7bbc9;
+}
+
+//Title Styles Text.
+////////////////////
+.taskNameTitle {
+  border-bottom:2px solid black;
+  text-align: center;
+  background-color: #83adb5;
+  padding: 10%;
+  border-top: 2px solid black;
+  transition:background-color 0.8s;
+  &:hover {
+    background-color: #6a9da6;
+  }
+}
+
+.taskDateTitle {
+  border-bottom:2px solid black;
+  border-top: 2px solid black;
+  text-align: center;
+  background-color: #83adb5;
+  margin-top: 10%;
+  padding: 5%;
+  transition:background-color 0.8s;
+  &:hover {
+    background-color: #6a9da6;
+  }
+}
+
+//Btn Styles.
+/////////////
+.btnStyle {
+  margin-top: 10%;
+  cursor: pointer;
+}
+
+#btnAction {
+  width: 40%;
+  height: 20px;
+  border:2px solid black;
+  text-align: center;
+  position: relative;
+  margin:auto;
+  padding: 2%;
+  background-color:#ef4f91;
+  transition:background-color 0.8s;
+  &:hover {
+background-color:#dc1466;
+  }
+}
+
+//Task blocks Styles.
+/////////////////////
+#newRowIncompletedBox {
+  width: 100%;
+  height: 100%;
+}
+
+#newRowCompletedBox {
+  width: 100%;
+  height: 100%;
+}
+
+.incompletedBlock {
+  width: 30%;
+  min-width: 87px;
+  list-style: none;
+  float: left;
+  border:2px solid black;
+  padding: 1%;
+  margin: 8%;
+  text-align: center;
+  height: 10%;
+  background-color: white;
+}
+
+.completedBlock {
+  width: 30%;
+  min-width: 87px;
+  list-style: none;
+  float: left;
+  border:2px solid black;
+  padding: 1%;
+  margin: 8%;
+  text-align: center;
+  height: 10%;
+  background-color: white;
+}
+
+//Responsive.
+/////////////
+@media only screen and (max-width: 1073px){
+  .incompletedBlock {
+    width: 80%;
+  }
+  .completedBlock {
+    width: 80%;
+  }
+}

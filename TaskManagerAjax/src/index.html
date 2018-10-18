@@ -1,18 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Javascript 2 CETAV</title>
-</head>
-<body>
-  <h1>Ejemplo AJAX</h1>
-  <div>
-    <button id="load-elements">Cargar elementos</button>
-  </div>
-  <ul id="container"></ul>
-  <script src="js/script.js"></script>
-</body>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Cristian">
+    <title>Cristian Felipe Practica.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+
+  <body>
+
+    <div class="mainWrapper">
+
+      <div class="titleBlock">
+        <h1 id="mainTitle">Task Manager.</h1>
+      </div>
+
+      <div class="processBlock">
+
+        <div class="processTitleBLock">
+          <h2>In process.</h2>
+        </div>
+
+        <div id="newRowIncompletedBox">
+        </div>
+
+      </div>
+
+      <div class="inputBlock">
+
+        <div class="taskNameTitle">
+          <h2>Task Name.</h2>
+          <input type="text" placeholder="Type your task name." id="taskManager">
+        </div>
+
+        <div class="taskDateTitle">
+          <h2>Task Deadline.</h2>
+          <input type="date" id="dateManager">
+        </div>
+
+        <div class="btnStyle">
+          <div id="btnAction">Register</div>
+        </div>
+
+      </div>
+
+      <div class="doneBlock">
+
+        <div class="completedTitleBlock">
+          <h2>Done.</h2>
+        </div>
+
+        <div id="newRowCompletedBox"></div>
+      </div>
+
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+
+  </body>
+
 </html>
