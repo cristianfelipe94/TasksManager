@@ -40,7 +40,11 @@ function uploadTask() {
     incompletedNewRow.appendChild(newTaskDateList);
 
     // Create an Object with information in it.
-    const MainArray = ({ TaskName: textNameWord.value, DateData: dateManager.value, Completed: false });
+    const MainArray = ({
+      TaskName: textNameWord.value,
+      DateData: dateManager.value,
+      Completed: false,
+    });
     // Add the Object into the Array.
     ObjectArray.push(MainArray);
     console.log(ObjectArray);
@@ -57,46 +61,45 @@ function uploadTask() {
 
     // Message that will be displayed as Task is successfully registered.
     mainTitle.innerHTML = 'Successful Task Registration.';
+    /* eslint-disable-next-line */
     function changeStatus() {
       if (checkBoxList.checked) {
-
-        //Will change Status from Object.
+        // Will change Status from Object.
         MainArray.Completed = true;
         console.log(ObjectArray);
 
-        //Set classes to DOM Elements.
+        // Set classes to DOM Elements.
         newTaskNameList.setAttribute('class', 'completedBlock');
         newTaskDateList.setAttribute('class', 'completedBlock');
 
-        //Information included into DOM Elements.
+        // Information included into DOM Elements.
         completedNewRow.appendChild(newTaskNameList);
         completedNewRow.appendChild(newTaskDateList);
 
-        //DOM Elements Styles.
+        // DOM Elements Styles.
         newTaskNameList.style.color = ('green');
         newTaskDateList.style.color = ('green');
       } else if (!checkBoxList.checked) {
 
-        //Will change Status from Object.
+        // Will change Status from Object.
         MainArray.Completed = false;
         console.log(ObjectArray);
 
-        //Set classes to DOM Elements.
+        // Set classes to DOM Elements.
         newTaskNameList.setAttribute('class', 'incompletedBlock');
         newTaskDateList.setAttribute('class', 'incompletedBlock');
 
-        //Information included into DOM Elements.
+        // Information included into DOM Elements.
         incompletedNewRow.appendChild(newTaskNameList);
         incompletedNewRow.appendChild(newTaskDateList);
 
-        //DOM Elements Styles.
+        // DOM Elements Styles.
         newTaskNameList.style.color = ('red');
         newTaskDateList.style.color = ('red');
       }
     }
 
     checkBoxList.addEventListener('click', changeStatus);
-
   } else if (textNameWord.value === '' && !dateManager.value) {
     textNameWord.style.border = ('5px solid red');
     dateManager.style.border = ('5px solid red');
@@ -170,9 +173,10 @@ function dataReceived(event) {
     }
     // This Function will change the status from the JSON Elements.
     // From completed to not completed.
+    /* eslint-disable-next-line */
     function changeStatus() {
       if (checkBoxList.checked) {
-        //Will change Status from Object.
+        // Will change Status from Object.
         element.Completed = true;
         // Set classes for the DOM Elements
         newTaskNameList.setAttribute('class', 'completedBlock');
@@ -185,9 +189,8 @@ function dataReceived(event) {
         // Apply styles to the Incompleted Rows.
         newTaskNameList.style.color = ('green');
         newTaskDateList.style.color = ('green');
-
       } else if (!checkBoxList.checked) {
-        //Will change Status from Object.
+        // Will change Status from Object.
         element.Completed = false;
         // Set classes for the DOM Elements
         newTaskNameList.setAttribute('class', 'incompletedBlock');
