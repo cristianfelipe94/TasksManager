@@ -9,7 +9,8 @@ const btnAction = document.getElementById('btnAction');
 
 // Create an Array.
 // Save the New Objects into this Global Array.
-const ObjectArray = [];
+const ObjectCompletedArray = [];
+console.log(ObjectCompletedArray);
 
 // Main function, Upload the current value into the DOM.
 function uploadTask() {
@@ -40,15 +41,14 @@ function uploadTask() {
     incompletedNewRow.appendChild(newTaskDateList);
 
     // Create an Object with information in it.
-    const MainArray = ({
+    const MainArray = {
       TaskName: textNameWord.value,
       DateData: dateManager.value,
       Completed: false,
-    });
+    };
     // Add the Object into the Array.
-    ObjectArray.push(MainArray);
-    console.log(ObjectArray);
-
+    ObjectCompletedArray.push(MainArray);
+    console.log(ObjectCompletedArray);
     // Apply styles to the Incompleted Rows.
     newTaskNameList.style.color = ('red');
     newTaskDateList.style.color = ('red');
@@ -66,8 +66,7 @@ function uploadTask() {
       if (checkBoxList.checked) {
         // Will change Status from Object.
         MainArray.Completed = true;
-        console.log(ObjectArray);
-
+        console.log(ObjectCompletedArray);
         // Set classes to DOM Elements.
         newTaskNameList.setAttribute('class', 'completedBlock');
         newTaskDateList.setAttribute('class', 'completedBlock');
@@ -80,11 +79,9 @@ function uploadTask() {
         newTaskNameList.style.color = ('green');
         newTaskDateList.style.color = ('green');
       } else if (!checkBoxList.checked) {
-
         // Will change Status from Object.
         MainArray.Completed = false;
-        console.log(ObjectArray);
-
+        console.log(ObjectCompletedArray);
         // Set classes to DOM Elements.
         newTaskNameList.setAttribute('class', 'incompletedBlock');
         newTaskDateList.setAttribute('class', 'incompletedBlock');
@@ -143,6 +140,8 @@ function dataReceived(event) {
 
     // Check If every element from the JSON is completed.
     if (!element.Completed) {
+      // Add the Object into the Array.
+      ObjectCompletedArray.push(element);
       // Set classes for the DOM Elements
       newTaskNameList.setAttribute('class', 'incompletedBlock');
       newTaskDateList.setAttribute('class', 'incompletedBlock');
@@ -156,6 +155,8 @@ function dataReceived(event) {
       newTaskDateList.style.color = ('red');
     // Check if every element from the JSON is not completed.
     } else if (element.Completed) {
+      // Add the Object into the Array.
+      ObjectCompletedArray.push(element);
       // Set classes for the DOM Elements
       newTaskNameList.setAttribute('class', 'completedBlock');
       newTaskDateList.setAttribute('class', 'completedBlock');
@@ -178,6 +179,7 @@ function dataReceived(event) {
       if (checkBoxList.checked) {
         // Will change Status from Object.
         element.Completed = true;
+        console.log(ObjectCompletedArray);
         // Set classes for the DOM Elements
         newTaskNameList.setAttribute('class', 'completedBlock');
         newTaskDateList.setAttribute('class', 'completedBlock');
@@ -192,6 +194,7 @@ function dataReceived(event) {
       } else if (!checkBoxList.checked) {
         // Will change Status from Object.
         element.Completed = false;
+        console.log(ObjectCompletedArray);
         // Set classes for the DOM Elements
         newTaskNameList.setAttribute('class', 'incompletedBlock');
         newTaskDateList.setAttribute('class', 'incompletedBlock');
@@ -230,3 +233,32 @@ window.addEventListener('load', getElements);
 
 // Set the Event to the BTN to run the Function.
 btnAction.addEventListener('click', uploadTask);
+
+const resumeBtnTasks = document.getElementById('resumeBtn');
+const resumeBtnTasksWrapper = document.getElementById('resumeWrapper');
+const hitMeResumeGoneWrap = document.getElementById('hitMeResumeGone');
+const hitMeResumeRowInfo = document.getElementById('newRowResumeBox');
+const resumeDescriptionInfo = document.getElementById('resumeDescription');
+
+function updateInformation() {
+  if (resumeBtnTasks.checked) {
+    resumeBtnTasks.setAttribute('class', 'resumeBtnStyleCompleted');
+    resumeBtnTasksWrapper.setAttribute('class', 'btnNoneStyleIncompleted');
+    hitMeResumeGoneWrap.innerHTML = '';
+    const hiddeIncompletedTasks = ObjectCompletedArray.filter(function (element) {
+      return element.Completed;
+    });
+    hitMeResumeRowInfo.innerHTML = hiddeIncompletedTasks[0].TaskName;
+    resumeDescriptionInfo.innerHTML = 'Main completed task name.';
+  } else if (!resumeBtnTasks.checked) {
+    resumeBtnTasks.setAttribute('class', 'resumeBtnStyleIncompleted');
+    resumeBtnTasksWrapper.setAttribute('class', 'btnNoneStyleCompleted');
+    hitMeResumeGoneWrap.innerHTML = '';
+    const hiddeIncompletedTasks = ObjectCompletedArray.filter(function (element) {
+      return !element.Completed;
+    });
+    hitMeResumeRowInfo.innerHTML = hiddeIncompletedTasks[0].TaskName;
+    resumeDescriptionInfo.innerHTML = 'Main incompleted task name.';
+  }
+}
+resumeBtnTasks.addEventListener('click', updateInformation);
